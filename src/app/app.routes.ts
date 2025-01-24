@@ -1,3 +1,15 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { SearchComponent } from './components/search/search.component';
+import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
+import { RecipeDetailsComponent } from './components/recipe-details/recipe-details.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+    { path: '', component: HomeComponent }, // Homepage
+    { path: 'search', component: SearchComponent }, // Search page
+    { path: 'recipes', component: RecipeListComponent }, // Recipe list
+    { path: 'recipe/:id', component: RecipeDetailsComponent }, // Recipe details
+    // { path: '**', redirectTo: '' } // Redirect unknown routes to the homepage
+    { path: '**', component: PageNotFoundComponent } // Redirect unknown routes to the homepage
+];
