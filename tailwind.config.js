@@ -21,7 +21,9 @@ module.exports = {
         heroText: '#F0EBE1',
         heroBtn: '#F29C33',
         blue: '#C4E5FC',
-        blueLine: '#b3d0e4'
+        blueLine: '#b3d0e4',
+        cardBottomColor: '#fffbf2',
+        cardOutline: 'rgba(38, 37, 34, 0.16)'
       },
       backdropBlur: {
         xs: '2px',
@@ -32,18 +34,12 @@ module.exports = {
         montserrat: ['Montserrat', 'sans-serif'],
       },
       fontSize: {
-        '17px': '17px',
-        '20px': '20px',
-        '22px': '22px',
-        '28px': '28px',
-        '32': '32px',
-        '40': '40px',
-        'xxs': '10px',
         '15': '15px',
-        '80': '80px'
+        '40': '40px',
       },
       borderRadius: {
         'custom': '12px',
+        'md': '30px',
         'large': '40px',
       },
       lineHeight: {
