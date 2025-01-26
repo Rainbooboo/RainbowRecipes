@@ -1,3 +1,12 @@
 .desc{
     color: #3f4d56;
 }
+
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    opacity: .35;
+    cursor: auto;
+    pointer-events: none;
+}
+button{
+    font-size: 70% !important;
+}

@@ -1,16 +1,19 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
   private scrollListener!: () => void;
+
+  openSmNav = false;
   
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
@@ -38,6 +41,10 @@ export class HeaderComponent {
     if (isPlatformBrowser(this.platformId)) {
       window.removeEventListener('scroll', this.scrollListener);
     }
+  }
+
+  openNav(){
+    this.openSmNav = !this.openSmNav;
   }
 
 }

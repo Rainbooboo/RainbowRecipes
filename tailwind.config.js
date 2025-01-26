@@ -6,10 +6,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xSm: '100'
+      },
       backgroundImage: {
         // "g": '#F0EBE1',
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         'hero-pattern': "url('/assets/images/hero.png')",
+        'footer': "url('/assets/images/footer.png')",
       },
       colors: {
         customBg: '#F0EBE1',
@@ -23,7 +27,9 @@ module.exports = {
         blue: '#C4E5FC',
         blueLine: '#b3d0e4',
         cardBottomColor: '#fffbf2',
-        cardOutline: 'rgba(38, 37, 34, 0.16)'
+        cardOutline: 'rgba(38, 37, 34, 0.16)',
+        lemon: '#9FDC26',
+        modalGray: '#484743'
       },
       backdropBlur: {
         xs: '2px',
@@ -35,6 +41,7 @@ module.exports = {
       },
       fontSize: {
         '15': '15px',
+        '26': '26px',
         '40': '40px',
       },
       borderRadius: {

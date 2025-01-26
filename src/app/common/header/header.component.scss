@@ -3,3 +3,23 @@
     color: #262522;
   }
   
+  .nav {
+    a.active{
+    color: #262522;
+    border-bottom: solid 4px#ee6352;
+    border-radius: 2px;
+  } }
+
+  
+  .block{
+    display: block;
+  }
+
+  @media (max-width:768px) {
+    .sm-nav {
+      a.active{
+      color: #ee6352 !important;
+      // border-bottom: solid 2px#ee6352;
+      // background-color: #ee6352;
+    } }
+  }
