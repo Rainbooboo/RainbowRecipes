@@ -1,19 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, ViewChild } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { Swiper } from 'swiper';
 // import Swiper from 'pagedone';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomeComponent {
 
-  swiper!: Swiper;
   activeTab = 'tab1';
 
   breakPoints = {
@@ -22,10 +22,7 @@ export class HomeComponent {
     },
     768: {
       slidesPerView: 2,
-    },
-    // 1024: {
-    //   slidesPerView: 3
-    // },
+    }
   }
 
   constructor(){

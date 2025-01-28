@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        xSm: '100'
+        xSm: '100',
+        xl: '1357px',
       },
       backgroundImage: {
         // "g": '#F0EBE1',
@@ -29,7 +30,8 @@ module.exports = {
         cardBottomColor: '#fffbf2',
         cardOutline: 'rgba(38, 37, 34, 0.16)',
         lemon: '#9FDC26',
-        modalGray: '#484743'
+        modalGray: '#484743',
+        textGray: '#858179',
       },
       backdropBlur: {
         xs: '2px',
@@ -41,8 +43,11 @@ module.exports = {
       },
       fontSize: {
         '15': '15px',
+        '21': '21px',
         '26': '26px',
+        '38': '38px',
         '40': '40px',
+        '80': '80px',
       },
       borderRadius: {
         'custom': '12px',
