@@ -1,0 +1,307 @@
+<section class="text-main pt-24 px-4 sm:px-8 md:px-12 lg:px-16">
+    <div class=" mx-auto  mt-6 md:px-4 pt-10 pb-4">
+        <div class="lg:w-4/6 text-center mx-auto">
+          <div class="lg:w-3/6 text-center mx-auto">
+            <a class="rounded-full bg-peach px-2 py-1 text-heroText text-sm lg:text-base">RECIPES</a>
+            <p class="font-montserrat text-26 sm:text-4xl font-bold mt-3.5 mb-2 sm:mb-3.5 text-nowrap">EMBARK ON A JOURNEY</p>
+            <p class="font-light desc mx-1.5 sm:mx-0">With our diverse collection of recipes we have something to satisfy every palate.</p>
+          </div>
+          <!-- TAB NAVIGATION -->
+          <div class="flex flex-wrap gap-4 mt-10 justify-center">
+            <button
+              class="px-6 font-medium text-borderOutline border border-borderOutline rounded-full hover:text-main hover:border-main"
+              [class.text-main]="activeTab === 'tab1'"
+              [class.bg-lemon]="activeTab === 'tab1'"
+              [class.border-main]="activeTab === 'tab1'"
+              (click)="setActiveTab('tab1')">
+              ALL
+            </button>
+            <!-- Tab Btn 2 -->
+            <button
+              class="px-6 py-2 font-medium text-borderOutline border border-borderOutline rounded-full hover:text-main hover:border-main"
+              [class.text-main]="activeTab === 'tab2'"
+              [class.bg-lemon]="activeTab === 'tab2'"
+              [class.border-main]="activeTab === 'tab2'"
+              (click)="setActiveTab('tab2')">
+              VEGAN
+            </button>
+            <!-- Tab Btn 3 -->
+            <button
+              class="px-6 py-2 font-medium text-borderOutline border border-borderOutline rounded-full hover:text-main hover:border-main"
+              [class.text-main]="activeTab === 'tab3'"
+              [class.bg-lemon]="activeTab === 'tab3'"
+              [class.border-main]="activeTab === 'tab3'"
+              (click)="setActiveTab('tab3')">
+              BREAKFAST
+            </button>
+            <!-- Tab Btn 4 -->
+            <button
+              class="px-6 py-2 font-medium text-borderOutline border border-borderOutline rounded-full hover:text-main hover:border-main"
+              [class.text-main]="activeTab === 'tab4'"
+              [class.bg-lemon]="activeTab === 'tab4'"
+              [class.border-main]="activeTab === 'tab4'"
+              (click)="setActiveTab('tab4')">
+              LUNCH
+            </button>
+            <!-- Tab Btn 5 -->
+            <button
+              class="px-6 py-2 font-medium text-borderOutline border border-borderOutline rounded-full hover:text-main hover:border-main"
+              [class.text-main]="activeTab === 'tab5'"
+              [class.bg-lemon]="activeTab === 'tab5'"
+              [class.border-main]="activeTab === 'tab5'"
+              (click)="setActiveTab('tab5')">
+              DINNER
+            </button>
+            <!-- Tab Btn 6 -->
+            <button
+              class="px-6 py-2 font-medium text-borderOutline border border-borderOutline rounded-full hover:text-main hover:border-main"
+              [class.text-main]="activeTab === 'tab6'"
+              [class.bg-lemon]="activeTab === 'tab6'"
+              [class.border-main]="activeTab === 'tab6'"
+              (click)="setActiveTab('tab6')">
+              DESSERT
+            </button>
+            <!-- Tab Btn 7 -->
+            <button
+              class="px-6 py-2 font-medium text-borderOutline border border-borderOutline rounded-full hover:text-main hover:border-main"
+              [class.text-main]="activeTab === 'tab7'"
+              [class.bg-lemon]="activeTab === 'tab7'"
+              [class.border-main]="activeTab === 'tab7'"
+              (click)="setActiveTab('tab7')">
+              QUICK BITE!
+            </button>
+          </div>
+        </div>
+        <!-- Tab Content -->
+        <div class="mt-9">
+          <div *ngIf="activeTab === 'tab1'" class="">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 -m-4 gap-4 p-4">
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/chicken.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-xl lg:text-2xl font-bold mb-3">Savory Herb-Infused Chicken</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light text-sm lg:text-base">Indulge in the rich and savory symphony of flavors with our Savory Herb-Infused Chicken</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto" routerLink="/recipe/:id">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/recipe2.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-xl lg:text-2xl font-bold mb-3">Lemon Garlic Grilled Chicken</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light text-sm lg:text-base">Experience the perfect blend of zesty lemon and aromatic garlic with this roasted chicken recipe</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto" routerLink="/recipe/:id">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/recipe3.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-xl lg:text-2xl font-bold mb-3">Quinoa Veggie Stir-Fry</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light text-sm lg:text-base">Quick, wholesome, and bursting with flavors, it's perfect for a healthy weeknight dinner.</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto" routerLink="/recipe/:id">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/recipe1.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-xl lg:text-2xl font-bold mb-3">Berry Bliss Smoothie Bowl</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light text-sm lg:text-base">This berry smoothie bowl is not only visually appealing but also a powerhouse of antioxidants.</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto" routerLink="/recipe/:id">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/recipe4.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-xl lg:text-2xl font-bold mb-3">Spaghetti Aglio e Olio</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light text-sm lg:text-base">A minimalist yet flavorful dish with garlic, olive oil, and a hint of red pepper flakes.</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/recipe5.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-xl lg:text-2xl font-bold mb-3">Grilled Veggies with Sauce</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light text-sm lg:text-base">Served with a zesty chimichurri sauce its a perfect addition a your outdoor gatherings.</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tab Content 2 -->
+          <div *ngIf="activeTab === 'tab2'" class="">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 -m-4 gap-4 p-4">
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/chicken.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-2xl font-bold mb-3">Savory Herb-Infused Chicken</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light">Indulge in the rich and savory symphony of flavors with our Savory Herb-Infused Chicken</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/recipe2.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-2xl font-bold mb-3">Lemon Garlic Grilled Chicken</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light">Experience the perfect blend of zesty lemon and aromatic garlic with this roasted chicken recipe</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/recipe3.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-2xl font-bold mb-3">Quinoa Veggie Stir-Fry</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light">Quick, wholesome, and bursting with flavors, it's perfect for a healthy weeknight dinner.</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/recipe1.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-2xl font-bold mb-3">Berry Bliss Smoothie Bowl</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light">This berry smoothie bowl is not only visually appealing but also a powerhouse of antioxidants.</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/recipe4.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-2xl font-bold mb-3">Spaghetti Aglio e Olio</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light">A minimalist yet flavorful dish with garlic, olive oil, and a hint of red pepper flakes.</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/recipe5.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-2xl font-bold mb-3">Grilled Veggies with Sauce</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light">Served with a zesty chimichurri sauce its a perfect addition a your outdoor gatherings.</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tab Content 3 -->
+          <div *ngIf="activeTab === 'tab3'" class="">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 -m-4 gap-4 p-4">
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/chicken.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-2xl font-bold mb-3">Savory Herb-Infused Chicken</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light">Indulge in the rich and savory symphony of flavors with our Savory Herb-Infused Chicken</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/recipe2.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-2xl font-bold mb-3">Lemon Garlic Grilled Chicken</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light">Experience the perfect blend of zesty lemon and aromatic garlic with this roasted chicken recipe</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/recipe3.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-2xl font-bold mb-3">Quinoa Veggie Stir-Fry</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light">Quick, wholesome, and bursting with flavors, it's perfect for a healthy weeknight dinner.</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/recipe1.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-2xl font-bold mb-3">Berry Bliss Smoothie Bowl</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light">This berry smoothie bowl is not only visually appealing but also a powerhouse of antioxidants.</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/recipe4.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-2xl font-bold mb-3">Spaghetti Aglio e Olio</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light">A minimalist yet flavorful dish with garlic, olive oil, and a hint of red pepper flakes.</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="h-full  rounded-md overflow-hidden">
+                <img class="lg:h-60 md:h-36 w-full object-cover object-center" src="assets/images/recipe5.png" alt="blog">
+                <div class="p-6 bg-cardBottomColor border border-borderOutline border-opacity-60 border-e border-s rounded-ee-md rounded-es-md">
+                  <h1 class="font-montserrat text-2xl font-bold mb-3">Grilled Veggies with Sauce</h1>
+                  <p class="leading-relaxed mb-8 lg:mb-11 font-light">Served with a zesty chimichurri sauce its a perfect addition a your outdoor gatherings.</p>
+                  <div class="flex justify-between items-center flex-wrap gap-5 lg:gap-0">
+                    <p class="text-xs font-medium"><span class="">40 MINS </span> <span class="">- EASY PREP</span><span class=""> - 3 SERVES</span></p>
+                    <button class="font-medium rounded-full border border-main px-6 py-2 w-full lg:w-auto">VIEW RECIPE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tab Content 4 -->
+          <div *ngIf="activeTab === 'tab4'" class="p-4 bg-gray-50 rounded-lg shadow">
+            <p>Content for Tab 3</p>
+          </div>
+          <!-- Tab Content 5 -->
+          <div *ngIf="activeTab === 'tab5'" class="p-4 bg-gray-50 rounded-lg shadow">
+            <p>Content for Tab 3</p>
+          </div>
+          <!-- Tab Content 6 -->
+          <div *ngIf="activeTab === 'tab6'" class="p-4 bg-gray-50 rounded-lg shadow">
+            <p>Content for Tab 3</p>
+          </div>
+          <!-- Tab Content 7 -->
+          <div *ngIf="activeTab === 'tab7'" class="p-4 bg-gray-50 rounded-lg shadow">
+            <p>Content for Tab 3</p>
+          </div>
+      </div>
+      </div>
+</section>

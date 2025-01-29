@@ -32,6 +32,7 @@ module.exports = {
         lemon: '#9FDC26',
         modalGray: '#484743',
         textGray: '#858179',
+        textGrey2: '#3f4d56'
       },
       backdropBlur: {
         xs: '2px',
@@ -40,6 +41,7 @@ module.exports = {
         sans: ['Roboto', 'Montserrat', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
+        homeMadeApple: ['Homemade Apple', 'Roboto'],
       },
       fontSize: {
         '15': '15px',
@@ -57,6 +59,12 @@ module.exports = {
       lineHeight: {
         '200': '200px'
       },
+      spacing: {  
+        'custom-top': '119px',
+      },
+      height: {
+        '85': '85%'
+      }
     },
   },
   plugins: [],
