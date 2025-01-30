@@ -15,6 +15,9 @@ module.exports = {
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         'hero-pattern': "url('/assets/images/hero.png')",
         'footer': "url('/assets/images/footer.png')",
+        'gluten-free': "url('/assets/images/gluten-free.png')",
+        'plant-based': "url('/assets/images/plant-based.png')",
+        'allergy-friendly': "url('/assets/images/allergy-friendly.png')",
       },
       colors: {
         customBg: '#F0EBE1',
