@@ -1,1 +1,6 @@
-<p>search works!</p>
+<form [formGroup]="searchForm">
+    <div class="mt-10 flex gap-3 justify-center">
+        <input type="text" class="px-4 py-2  text-neutral-500 bg-borderOutline border border-borderOutline rounded-full w-7/12 outline-none" formControlName="query">
+        <button class="px-6 py-2 text-xs font-medium text-neutral-500 border border-borderOutline rounded-3xl" (click)="search()">SEARCH</button>
+    </div>
+</form>
