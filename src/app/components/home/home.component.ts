@@ -3,6 +3,7 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, ViewChild } from '@angul
 import { RouterModule } from '@angular/router';
 import { Swiper } from 'swiper';
 import { CommonService } from '../../shared/services/common.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
 // import Swiper from 'pagedone';
 
 @Component({
@@ -16,7 +17,9 @@ import { CommonService } from '../../shared/services/common.service';
 export class HomeComponent {
 
   activeTab = 'tab1';
-
+  query!: string;
+    searchForm!: FormGroup;
+    searchResults: any[] = [];
   featuredRecipe: any[] = [];
 
   breakPoints = {
@@ -28,12 +31,14 @@ export class HomeComponent {
     }
   }
 
-  constructor(private commonService: CommonService){
+  constructor(private commonService: CommonService, private fb: FormBuilder){
 
   }
 
   ngOnInit(): void { 
+    this.initform();
     this.getFeaturedRecipes();
+    this.getRecipes();
   }
 
   ngAfterViewInit() {
@@ -42,6 +47,36 @@ export class HomeComponent {
 
   setActiveTab(tab: string) {
     this.activeTab = tab;
+  }
+  
+  searchFor(value:string){
+    console.log(value)
+    this.searchForm.patchValue({
+      query: value
+    })
+    this.getRecipes();
+  }
+
+
+  initform(){
+    this.searchForm = this.fb.group({
+      query: ['']
+    })
+  }
+
+  getRecipes() {
+    this.query = this.searchForm.get('query')?.value
+    console.log(this.query)
+    this.commonService.searchForRecipe(this.query).subscribe({
+      next: (res) => {
+        console.log(res);
+        this.searchResults = res.results;
+      },
+      error: (err) => {
+        console.log(err);
+
+      }
+    })
   }
 
   getFeaturedRecipes(){

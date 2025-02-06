@@ -34,5 +34,12 @@ export class CommonService {
     const headers = new HttpHeaders ({'Content-Type':'application/json'});
     return this.http.get<any>(`${environment.apiUrl}/random?number=${10}&apiKey=${environment.API_KEY}`, {headers});
   }
+  
+  getRecipeById(recipeId: number): Observable<any> {
+    return this.http.get<any>(`${environment.apiUrl}/${recipeId}/information?apiKey=${environment.API_KEY}`);
+  }
+  getSimilarRecipe(recipeId: number): Observable<any> {
+    return this.http.get<any>(`${environment.apiUrl}/${recipeId}/similar?apiKey=${environment.API_KEY}`);
+  }
 }
 
