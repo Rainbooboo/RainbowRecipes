@@ -33,7 +33,7 @@ export class SearchComponent {
 
   search() {
     this.query = this.searchForm.get('query')?.value
-    console.log(this.query)
+    // console.log(this.query)
     this.commonService.searchForRecipe(this.query).subscribe({
       next: (res) => {
         // console.log(res);

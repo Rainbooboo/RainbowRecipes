@@ -50,7 +50,7 @@ export class HomeComponent {
   }
   
   searchFor(value:string){
-    console.log(value)
+    // console.log(value)
     this.searchForm.patchValue({
       query: value
     })
@@ -66,14 +66,14 @@ export class HomeComponent {
 
   getRecipes() {
     this.query = this.searchForm.get('query')?.value
-    console.log(this.query)
+    // console.log(this.query)
     this.commonService.searchForRecipe(this.query).subscribe({
       next: (res) => {
-        console.log(res);
+        // console.log(res);
         this.searchResults = res.results;
       },
       error: (err) => {
-        console.log(err);
+        // console.log(err);
 
       }
     })
@@ -82,11 +82,11 @@ export class HomeComponent {
   getFeaturedRecipes(){
     this.commonService.getRandomRecipes().subscribe({
       next: (res) =>{
-        console.log(res);
+        // console.log(res);
         this.featuredRecipe = res.recipes
       },
       error(err) {
-        console.log(err);
+        // console.log(err);
           
       },
     })

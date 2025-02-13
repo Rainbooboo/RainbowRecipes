@@ -35,7 +35,7 @@ export class RecipeListComponent {
   handleSearchResults(data: any[]) {
     this.recipes = data;
   }  searchFor(value:string){
-    console.log(value)
+    // console.log(value)
     this.searchForm.patchValue({
       query: value
     })
@@ -51,10 +51,10 @@ export class RecipeListComponent {
 
   getRecipes() {
     this.query = this.searchForm.get('query')?.value
-    console.log(this.query)
+    // console.log(this.query)
     this.commonService.searchForRecipe(this.query).subscribe({
       next: (res) => {
-        console.log(res);
+        // console.log(res);
         this.searchResults = res.results;
       },
       error: (err) => {

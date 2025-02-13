@@ -47,7 +47,7 @@ export class RecipeDetailsComponent {
     this.commonService.getRecipeById(this.recipeId).subscribe({
       next: (res) => {
         this.recipeDetails = res;
-        console.log(this.recipeDetails);
+        // console.log(this.recipeDetails);
 
         // Extract equipment if available
         if (res.analyzedInstructions?.length > 0) {
@@ -71,7 +71,7 @@ export class RecipeDetailsComponent {
     this.commonService.getSimilarRecipe(this.recipeId).subscribe({
       next: (res) => {
         this.similarRecipe = res;
-        console.log(this.similarRecipe);
+        // console.log(this.similarRecipe);
       },
       error: (err) => {
         console.log(err);
