@@ -47,7 +47,7 @@ export class RecipeDetailsComponent {
     this.commonService.getRecipeById(this.recipeId).subscribe({
       next: (res) => {
         this.recipeDetails = res;
-        // console.log(this.recipeDetails);
+        console.log(this.recipeDetails);
 
         // Extract equipment if available
         if (res.analyzedInstructions?.length > 0) {
